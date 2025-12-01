@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Image/sujit.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sujit Swain | Java Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              neutral: { 950: '#0a0a0a' }
+            },
+            animation: {
+              'spin-slow': 'spin 10s linear infinite',
+              'reverse-spin': 'spin 15s linear infinite reverse',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3, .font-mono { font-family: 'JetBrains Mono', monospace; } /* Tech font */
+      
+      /* Smooth scrolling with offset for fixed navbar */
+      html { 
+        scroll-behavior: smooth; 
+        scroll-padding-top: 80px; /* Matches navbar height */
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      /* Light mode thumb */
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      /* Dark mode overrides */
+      html.dark ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      html.dark ::-webkit-scrollbar-thumb {
+        background: #333; 
+      }
+      html.dark ::-webkit-scrollbar-thumb:hover {
+        background: #e11d48;
+      }
+      html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+        background: #e11d48;
+      }
+
+      /* Global Flow Background (Dark Mode) */
+      .animate-flow-dark {
+        background-size: 400% 400%;
+        animation: flow-animation 15s ease infinite;
+      }
+      
+      /* Global Flow Background (Light Mode) */
+      .animate-flow-light {
+        background-size: 400% 400%;
+        animation: flow-animation 15s ease infinite;
+      }
+
+      @keyframes flow-animation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      /* === SHIMMER TEXT EFFECT === */
+      .shimmer-text {
+        background: linear-gradient(to right, #e11d48 20%, #10b981 40%, #e11d48 60%, #10b981 80%);
+        background-size: 200% auto;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: shimmer 4s linear infinite;
+        font-weight: 800;
+      }
+      @keyframes shimmer {
+        to { background-position: 200% center; }
+      }
+
+      /* === GLITCH TEXT EFFECT === */
+      .glitch {
+        position: relative;
+        mix-blend-mode: hard-light;
+      }
+      .glitch::before,
+      .glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      html.dark .glitch::before, html.dark .glitch::after { background: #0a0a0a; }
+      html:not(.dark) .glitch::before, html:not(.dark) .glitch::after { background: #f8fafc; }
+
+      .glitch::before {
+        left: 2px;
+        text-shadow: -2px 0 #e11d48;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-anim 5s infinite linear alternate-reverse;
+      }
+      .glitch::after {
+        left: -2px;
+        text-shadow: -2px 0 #10b981;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-anim2 5s infinite linear alternate-reverse;
+      }
+      @keyframes glitch-anim {
+        0% { clip: rect(42px, 9999px, 44px, 0); }
+        5% { clip: rect(12px, 9999px, 59px, 0); }
+        10% { clip: rect(48px, 9999px, 29px, 0); }
+        15.0% { clip: rect(42px, 9999px, 73px, 0); }
+        20% { clip: rect(63px, 9999px, 27px, 0); }
+        25% { clip: rect(34px, 9999px, 55px, 0); }
+        30.0% { clip: rect(86px, 9999px, 73px, 0); }
+        35% { clip: rect(20px, 9999px, 20px, 0); }
+        40% { clip: rect(26px, 9999px, 60px, 0); }
+        45% { clip: rect(25px, 9999px, 66px, 0); }
+        50% { clip: rect(57px, 9999px, 98px, 0); }
+        55.0% { clip: rect(5px, 9999px, 46px, 0); }
+        60% { clip: rect(82px, 9999px, 31px, 0); }
+        65% { clip: rect(54px, 9999px, 27px, 0); }
+        70% { clip: rect(28px, 9999px, 99px, 0); }
+        75% { clip: rect(45px, 9999px, 69px, 0); }
+        80% { clip: rect(23px, 9999px, 85px, 0); }
+        85.0% { clip: rect(54px, 9999px, 84px, 0); }
+        90% { clip: rect(45px, 9999px, 47px, 0); }
+        95% { clip: rect(37px, 9999px, 20px, 0); }
+        100% { clip: rect(4px, 9999px, 91px, 0); }
+      }
+      @keyframes glitch-anim2 {
+        0% { clip: rect(65px, 9999px, 100px, 0); }
+        5% { clip: rect(52px, 9999px, 74px, 0); }
+        10% { clip: rect(79px, 9999px, 85px, 0); }
+        15.0% { clip: rect(75px, 9999px, 5px, 0); }
+        20% { clip: rect(67px, 9999px, 61px, 0); }
+        25% { clip: rect(14px, 9999px, 79px, 0); }
+        30.0% { clip: rect(1px, 9999px, 66px, 0); }
+        35% { clip: rect(86px, 9999px, 30px, 0); }
+        40% { clip: rect(23px, 9999px, 98px, 0); }
+        45% { clip: rect(85px, 9999px, 72px, 0); }
+        50% { clip: rect(71px, 9999px, 75px, 0); }
+        55.0% { clip: rect(2px, 9999px, 48px, 0); }
+        60% { clip: rect(30px, 9999px, 16px, 0); }
+        65% { clip: rect(59px, 9999px, 50px, 0); }
+        70% { clip: rect(41px, 9999px, 62px, 0); }
+        75% { clip: rect(2px, 9999px, 82px, 0); }
+        80% { clip: rect(47px, 9999px, 73px, 0); }
+        85.0% { clip: rect(3px, 9999px, 27px, 0); }
+        90% { clip: rect(26px, 9999px, 55px, 0); }
+        95% { clip: rect(42px, 9999px, 97px, 0); }
+        100% { clip: rect(38px, 9999px, 49px, 0); }
+      }
+
+      /* === MOVING CYBER GRID === */
+      .cyber-grid {
+        background-image: 
+          linear-gradient(to right, rgba(225, 29, 72, 0.1) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(16, 185, 129, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+        transform: perspective(500px) rotateX(60deg);
+        animation: grid-move 20s linear infinite;
+        opacity: 0.3;
+      }
+      html:not(.dark) .cyber-grid {
+         background-image: 
+          linear-gradient(to right, rgba(225, 29, 72, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+         opacity: 0.5;
+      }
+      @keyframes grid-move {
+        0% { background-position: 0 0; }
+        100% { background-position: 0 40px; }
+      }
+
+      /* Neon Pulse Profile */
+      @keyframes neon-pulse {
+        0% { box-shadow: 0 0 0px transparent; border-color: #333; }
+        20% { box-shadow: 0 0 30px #e11d48; border-color: #e11d48; } 
+        40% { box-shadow: 0 0 30px #e11d48; border-color: #e11d48; }
+        50% { box-shadow: 0 0 0px transparent; border-color: #333; } 
+        70% { box-shadow: 0 0 30px #10b981; border-color: #10b981; } 
+        90% { box-shadow: 0 0 30px #10b981; border-color: #10b981; }
+        100% { box-shadow: 0 0 0px transparent; border-color: #333; }
+      }
+      .animate-neon { animation: neon-pulse 6s infinite ease-in-out; }
+
+      /* AI Chat Pulse */
+      @keyframes glow-pulse {
+        0% { box-shadow: 0 0 5px rgba(16, 185, 129, 0.5); }
+        50% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.8), 0 0 10px rgba(16, 185, 129, 0.6); }
+        100% { box-shadow: 0 0 5px rgba(16, 185, 129, 0.5); }
+      }
+      .animate-glow-pulse { animation: glow-pulse 2s infinite; }
+
+      /* Laser Beam Timeline */
+      .laser-beam {
+        width: 2px;
+        background: linear-gradient(to bottom, #e11d48, #10b981);
+        box-shadow: 0 0 15px #e11d48, 0 0 20px #10b981;
+        animation: beam-pulse 2s infinite alternate;
+      }
+      @keyframes beam-pulse {
+        0% { opacity: 0.5; box-shadow: 0 0 5px #e11d48; }
+        100% { opacity: 1; box-shadow: 0 0 20px #e11d48, 0 0 10px #10b981; }
+      }
+
+      /* === QUANTUM CORE MODEL === */
+      .quantum-wrapper {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        transform-style: preserve-3d;
+        pointer-events: none;
+        animation: float-slow 8s ease-in-out infinite;
+      }
+      .quantum-core {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60px;
+        height: 60px;
+        background: radial-gradient(circle, #fff, #e11d48);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 50px #e11d48, inset 0 0 20px #fff;
+        animation: core-breathe 3s ease-in-out infinite;
+        z-index: 20;
+      }
+      .quantum-ring {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        border: 2px dashed rgba(16, 185, 129, 0.3);
+        transform: translate(-50%, -50%);
+        transform-style: preserve-3d;
+      }
+      .qr-1 { width: 140px; height: 140px; border-color: rgba(16, 185, 129, 0.5); animation: spin-3d-1 10s linear infinite; }
+      .qr-2 { width: 220px; height: 220px; border-color: rgba(225, 29, 72, 0.4); animation: spin-3d-2 15s linear infinite reverse; }
+      .qr-3 { width: 300px; height: 300px; border: 1px solid rgba(255, 255, 255, 0.1); animation: spin-3d-3 20s linear infinite; }
+
+      .quantum-particle {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: #10b981;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #10b981;
+      }
+
+      @keyframes core-breathe {
+        0%, 100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.8; }
+        50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; box-shadow: 0 0 70px #e11d48; }
+      }
+      @keyframes spin-3d-1 {
+        from { transform: translate(-50%, -50%) rotateX(70deg) rotateZ(0deg); }
+        to { transform: translate(-50%, -50%) rotateX(70deg) rotateZ(360deg); }
+      }
+      @keyframes spin-3d-2 {
+        from { transform: translate(-50%, -50%) rotateY(60deg) rotateZ(0deg); }
+        to { transform: translate(-50%, -50%) rotateY(60deg) rotateZ(360deg); }
+      }
+      @keyframes spin-3d-3 {
+        from { transform: translate(-50%, -50%) rotateX(-45deg) rotateY(20deg) rotateZ(0deg); }
+        to { transform: translate(-50%, -50%) rotateX(-45deg) rotateY(20deg) rotateZ(360deg); }
+      }
+      @keyframes float-slow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-30px); }
+      }
+      
+      /* Typewriter Cursor */
+      .cursor-blink {
+        display: inline-block;
+        width: 3px;
+        height: 1.2em;
+        background-color: #e11d48;
+        margin-left: 4px;
+        vertical-align: middle;
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.3.8",
+    "@google/genai": "https://esm.run/@google/genai"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="dark:bg-neutral-950 bg-slate-50 dark:text-neutral-200 text-slate-800 antialiased overflow-x-hidden selection:bg-rose-500/30 selection:text-rose-200">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
