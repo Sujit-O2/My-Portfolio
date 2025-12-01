@@ -24,9 +24,11 @@ export interface Education {
 export interface Project {
   title: string;
   subtitle?: string;
-  period: string;
+  period?: string;
   description: string;
   tags: string[];
+  link?: string;
+  source?: 'resume' | 'github';
 }
 
 export interface SkillCategory {
@@ -56,6 +58,17 @@ export interface ResumeData {
   skills: SkillCategory[];
   achievements: Achievement[];
   certifications: Certification[];
-  leetcode:string;
-  hackerrank:string;
+  leetcode: string;
+  hackerrank: string;
+}
+
+export interface GitHubRepo {
+  id: number;
+  name: string;
+  description: string | null;
+  html_url: string;
+  language: string | null;
+  topics: string[];
+  updated_at: string;
+  fork: boolean;
 }
