@@ -184,7 +184,7 @@ const handleDownloadResume = () => {
           {/* Main Image Container with Custom Pulse Animation */}
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full dark:bg-neutral-950 bg-slate-100 border-4 overflow-hidden animate-neon transition-all duration-300 z-10">
              <img 
-              src="/Image/sujit.png" 
+              src="/image/sujit.png" 
               alt={RESUME_DATA.name} 
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100"
             />
