@@ -42,8 +42,8 @@ const Hero: React.FC = () => {
 
 const handleDownloadResume = () => {
   const link = document.createElement("a");
-  link.href = "/CV/flowcv.pdf"; // <-- file inside public/
-  link.download = "Sujit_Swain_Resume.pdf";
+ link.href = "https://drive.google.com/uc?export=download&id=11Jr_4KDbiHsqKl5gyTBx1F2N5_CGswCj";
+    link.download = "Sujit_Swain_Resume.pdf";
   link.click();
 };
 
@@ -184,7 +184,7 @@ const handleDownloadResume = () => {
           {/* Main Image Container with Custom Pulse Animation */}
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full dark:bg-neutral-950 bg-slate-100 border-4 overflow-hidden animate-neon transition-all duration-300 z-10">
              <img 
-              src="/image/sujit.png" 
+             src="https://lh3.googleusercontent.com/pw/AP1GczM3X8RlrZHPIIltHP4cGK5x_xh6b2AS_wUhgQT7_3gSKQC8a1iskPv2u0mw8VrHBFQHRQ_7oTdJGORqKguYST89qFmkvFawda76Jq5Lh7KktKhUrhaL_zOmouMggsKJlTL4X9K486hqYNgSkQv__vVGhg=w863-h972-s-no-gm?authuser=0"
               alt={RESUME_DATA.name} 
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100"
             />
