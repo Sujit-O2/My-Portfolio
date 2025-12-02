@@ -26,7 +26,7 @@ export const RESUME_DATA: ResumeData = {
       role: "Session Lead (Trainee)",
       company: "TECHXERA - Programming Club, Nalonda Institute of Technology",
       location: "Bhubaneswar",
-      period: "12/2023 – Present",
+      period: "12/2023 – 09/2025",
       description: [
         "Led sessions on Java, Web Development, APIs, and Problem Solving.",
         "Mentored peers and contributed to organizing coding events and club activities."
